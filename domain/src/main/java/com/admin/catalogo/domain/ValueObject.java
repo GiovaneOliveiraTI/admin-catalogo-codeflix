@@ -1,4 +1,4 @@
-package com.admin.catalogo.domain.category;
+package com.admin.catalogo.domain;
 
 public abstract class ValueObject {
 }
