@@ -1,2 +1,19 @@
-package com.admin.catalogo.domain.validation;public interface ValidationHandler {
+package com.admin.catalogo.domain.validation;
+
+import javax.xml.validation.Validator;
+import java.util.List;
+
+public interface ValidationHandler {
+
+    ValidationHandler append(Error anError);
+    ValidationHandler append(ValidationHandler anHandler);
+    ValidationHandler validate(Validation aValidation);
+    List<Error> getErrors();
+    default boolean hasErrors() {
+        return getErrors() != null && !getErrors().isEmpty();
+    }
+    public interface Validation {
+        void validate();
+    }
+
 }

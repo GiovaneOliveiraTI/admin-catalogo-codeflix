@@ -1,2 +1,4 @@
-package com.admin.catalogo.domain.validation;public record Error() {
+package com.admin.catalogo.domain.validation;
+
+public record Error(String message) {
 }
