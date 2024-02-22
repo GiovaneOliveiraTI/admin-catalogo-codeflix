@@ -1,10 +1,15 @@
 package com.admin.catalogo.domain.category;
 
+import com.admin.catalogo.domain.AggregateRoot;
+import com.admin.catalogo.domain.validation.ValidationHandler;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.Instant;
+@Getter
+@Setter
+public class Category extends AggregateRoot<CategoryID> {
 
-public class Category {
-
-    private String id;
     private String name;
     private String description;
     private boolean active;
@@ -12,13 +17,34 @@ public class Category {
     private Instant updatedAt;
     private Instant deletedAt;
 
-    public Category(String id, String name, String description, boolean active, Instant createdAt, Instant updatedAt, Instant deletedAt) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.active = active;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
-        this.deletedAt = deletedAt;
+    private Category(
+            final CategoryID anId,
+            final String aName,
+            final String aDescription,
+            final boolean isActive,
+            final Instant aCreationDate,
+            final Instant aUpdatedDate,
+            final Instant aDeleteDate
+    ) {
+        super(anId);
+        this.name = aName;
+        this.description = aDescription;
+        this.active = isActive;
+        this.createdAt = aCreationDate;
+        this.updatedAt = aUpdatedDate;
+        this.deletedAt = aDeleteDate;
+    }
+
+    public static Category newCategory(final String aName, final String aDescription, final boolean isActive) {
+        final var id = CategoryID.unique();
+        final var now = Instant.now();
+        final var deletedAt = isActive ? null : now;
+        return new Category(id, aName, aDescription, isActive, now, now, deletedAt);
+
+    }
+
+    @Override
+    public void validate(ValidationHandler handler) {
+        new CateroryValidator(this,handler).validate();
     }
 }
