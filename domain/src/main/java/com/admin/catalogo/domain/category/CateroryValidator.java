@@ -6,6 +6,8 @@ import com.admin.catalogo.domain.validation.Validator;
 
 public class CateroryValidator extends Validator {
 
+    public static final int NAME_MAX_LENGTH = 255;
+    public static final int NAME_MIN_LENGTH = 3;
     private final Category category;
     protected CateroryValidator(final Category aCategory, final ValidationHandler aHandler) {
         super(aHandler);
@@ -16,10 +18,10 @@ public class CateroryValidator extends Validator {
 
     @Override
     public void validate() {
-        this.checkNameContraints();
+        this.checkNameConstraints();
     }
 
-    private void checkNameContraints() {
+    private void checkNameConstraints() {
         final var name = this.category.getName();
         if(name == null) {
             this.validationHandler().append(new Error("'Name' should not be null"));
@@ -31,7 +33,7 @@ public class CateroryValidator extends Validator {
             return;
         }
         final int length = name.trim().length();
-        if(length > 255 || length <3) {
+        if(length > NAME_MAX_LENGTH || length < NAME_MIN_LENGTH) {
             this.validationHandler().append(new Error("'Name' must be between 3 and 255 characters"));
         }
     }
