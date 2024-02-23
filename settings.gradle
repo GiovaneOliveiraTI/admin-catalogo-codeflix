@@ -1,2 +1,5 @@
 rootProject.name = 'admin-catalogo-codeflix'
+include 'domain'
+include 'application'
+include 'infrastructure'
 
