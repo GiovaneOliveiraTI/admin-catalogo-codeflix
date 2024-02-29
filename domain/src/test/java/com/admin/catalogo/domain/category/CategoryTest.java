@@ -32,7 +32,7 @@ public class CategoryTest {
     @Test
     public void givenAvalidNullName_whenCallNewCategoryAndValidateShouldReceiveError() {
         final String expectedName = null;
-        final var expectedErrorMessage = "'Name' should not be null";
+        final var expectedErrorMessage = "'name' should not be null";
         final var expectedErrorCount = 1;
         final var expectedDecription = "A categoria mais assistida";
         final var expectedIsActive = true;
@@ -54,7 +54,7 @@ public class CategoryTest {
     @Test
     public void givenAvalidEmptyName_whenCallNewCategoryAndValidateShouldReceiveError() {
         final var expectedName = "  ";
-        final var expectedErrorMessage = "'Name' should not be empty";
+        final var expectedErrorMessage = "'name' should not be empty";
         final var expectedErrorCount = 1;
         final var expectedDecription = "A categoria mais assistida";
         final var expectedIsActive = true;
@@ -73,7 +73,7 @@ public class CategoryTest {
     @Test
     public void givenANInvalidyNameLenghtLessThan3_whenCallNewCategoryAndValidateShouldReceiveError() {
         final var expectedName = "FR  ";
-        final var expectedErrorMessage = "'Name' must be between 3 and 255 characters";
+        final var expectedErrorMessage = "'name' must be between 3 and 255 characters";
         final var expectedErrorCount = 1;
         final var expectedDecription = "A categoria mais assistida";
         final var expectedIsActive = true;
@@ -101,7 +101,7 @@ public class CategoryTest {
                  No mundo atual, o novo modelo estrutural aqui preconizado prepara-nos para enfrentar situações atípicas decorrentes dos índices pretendidos. 
                  Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a execução dos pontos do programa estende o alcance e a importância dos relacionamentos verticais entre as hierarquias.
                 """;
-        final var expectedErrorMessage = "'Name' must be between 3 and 255 characters";
+        final var expectedErrorMessage = "'name' must be between 3 and 255 characters";
         final var expectedErrorCount = 1;
         final var expectedDecription = "A categoria mais assistida";
         final var expectedIsActive = true;

@@ -14,8 +14,6 @@ public class CateroryValidator extends Validator {
         this.category = aCategory;
     }
 
-
-
     @Override
     public void validate() {
         this.checkNameConstraints();
@@ -24,17 +22,17 @@ public class CateroryValidator extends Validator {
     private void checkNameConstraints() {
         final var name = this.category.getName();
         if(name == null) {
-            this.validationHandler().append(new Error("'Name' should not be null"));
+            this.validationHandler().append(new Error("'name' should not be null"));
             return;
         }
 
         if(name.isBlank()) {
-            this.validationHandler().append(new Error("'Name' should not be empty"));
+            this.validationHandler().append(new Error("'name' should not be empty"));
             return;
         }
         final int length = name.trim().length();
         if(length > NAME_MAX_LENGTH || length < NAME_MIN_LENGTH) {
-            this.validationHandler().append(new Error("'Name' must be between 3 and 255 characters"));
+            this.validationHandler().append(new Error("'name' must be between 3 and 255 characters"));
         }
     }
 }

@@ -29,6 +29,6 @@ public class ThrowsValidationHandler implements ValidationHandler {
 
     @Override
     public List<Error> getErrors() {
-        return null;
+        return List.of();
     }
 }

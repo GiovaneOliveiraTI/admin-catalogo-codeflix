@@ -1,24 +1,17 @@
 package com.admin.catalogo.application.category.create;
 
 import com.admin.catalogo.domain.category.CategoryGateway;
-import com.admin.catalogo.domain.exceptions.DomainException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.w3c.dom.DOMException;
 
 import java.util.Objects;
 
 import static org.mockito.AdditionalAnswers.returnsFirstArg;
-import static org.mockito.Mockito.any;
-import static org.mockito.Mockito.argThat;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class CreateCategoryUseCaseTest {
@@ -40,7 +33,7 @@ public class CreateCategoryUseCaseTest {
         when(categoryGateway.create(any()))
                 .thenAnswer(returnsFirstArg());
 
-        final var actualOutput = useCase.execute(aCommand);
+        final var actualOutput = useCase.execute(aCommand).get();
 
         Assertions.assertNotNull(actualOutput);
         Assertions.assertNotNull(actualOutput.id());
@@ -71,10 +64,10 @@ public class CreateCategoryUseCaseTest {
 
         final var aCommand = CreateCategoryCommand.with(expectedName, expectedDescription, expectedIsActive);
 
+        final var notification  = useCase.execute(aCommand).getLeft();
 
-       final var actualException = Assertions.assertThrows(DomainException.class, () -> useCase.execute(aCommand));
-
-        Assertions.assertEquals(expectedErrorMessage, actualException.getMessage());
+        Assertions.assertEquals(expectedErrorCount, notification.getErrors().size());
+        Assertions.assertEquals(expectedErrorMessage, notification.firstError().message());
 
         verify(categoryGateway, times(0))
                 .create(any());
@@ -93,7 +86,7 @@ public class CreateCategoryUseCaseTest {
         when(categoryGateway.create(any()))
                 .thenAnswer(returnsFirstArg());
 
-        final var actualOutput = useCase.execute(aCommand);
+        final var actualOutput = useCase.execute(aCommand).get();
 
         Assertions.assertNotNull(actualOutput);
         Assertions.assertNotNull(actualOutput.id());
@@ -113,24 +106,36 @@ public class CreateCategoryUseCaseTest {
     }
 
     @Test
-    public void givenAValidCommand_WhenGateThrowsRandomException_ShouldReturnException() {
+    public void givenAValidCommand_WhenGatewayThrowsRandomException_ShouldReturnException() {
 
         final var expectedName = "Filmes";
         final var expectedDescription = "A categoria mais assistida";
         final var expectedIsActive = true;
         final var expectedErrorMessage = "Gateway error";
+        final var expectedErrorCount = 1;
 
         final var aCommand = CreateCategoryCommand.with(expectedName, expectedDescription, expectedIsActive);
 
         when(categoryGateway.create(any()))
                 .thenThrow(new IllegalStateException(expectedErrorMessage));
 
-        final var actualException =
-                Assertions.assertThrows(IllegalStateException.class, () -> useCase.execute(aCommand));
 
-        Assertions.assertEquals(expectedErrorMessage, actualException.getMessage());
+        final var notification  = useCase.execute(aCommand).getLeft();
+
+        Assertions.assertEquals(expectedErrorCount, notification.getErrors().size());
+        Assertions.assertEquals(expectedErrorMessage, notification.firstError().message());
+
 
         verify(categoryGateway, times(1))
-                .create(any());
+                .create(argThat(aCategory -> {
+                            return  Objects.equals(expectedName, aCategory.getName())
+                                    && Objects.equals(expectedDescription, aCategory.getDescription())
+                                    && Objects.equals(expectedIsActive, aCategory.isActive())
+                                    && Objects.nonNull(aCategory.getId())
+                                    && Objects.nonNull(aCategory.getCreatedAt())
+                                    && Objects.nonNull(aCategory.getUpdatedAt())
+                                    && Objects.isNull(aCategory.getDeletedAt());
+                        }
+                ));
     }
 }
