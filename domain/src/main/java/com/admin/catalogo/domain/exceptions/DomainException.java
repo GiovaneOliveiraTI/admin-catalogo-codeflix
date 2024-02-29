@@ -13,11 +13,11 @@ public class DomainException extends NoStackTraceException {
         this.erros = anErrors;
     }
     public static DomainException with(final Error anErrors) {
-        return new DomainException("", List.of(anErrors));
+        return new DomainException("'name' should not be null", List.of(anErrors));
     }
 
     public static DomainException with(final List<Error> anErrors) {
-        return new DomainException("", anErrors);
+        return new DomainException("'name' should not be null", anErrors);
     }
 
 

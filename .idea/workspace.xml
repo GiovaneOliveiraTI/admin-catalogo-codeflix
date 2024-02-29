@@ -4,16 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fbf3906-100c-4f95-8752-344a0ed80b54" name="Changes" comment="Implementando ativar e inativar categoria, correcao de testes unitarios e validator.">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="1fbf3906-100c-4f95-8752-344a0ed80b54" name="Changes" comment="Implementando update e implementando testes unitarios.">
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/NullaryUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/UnitUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/category/create/CreateCategoryCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/category/create/CreateCategoryOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/category/create/CreateCategoryUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/category/create/DefaultCreateCategoryUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/test/java/com/admin/catalogo/application/category/create/CreateCategoryUseCaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/category/CategoryGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/category/CategorySearchQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/pagination/Pagination.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/UseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/UseCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/test/java/com/admin/catalogo/application/UseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/admin/catalogo/application/UseCaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/category/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/admin/catalogo/domain/category/CategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/admin/catalogo/domain/category/CategoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/admin/catalogo/infrastructure/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/admin/catalogo/infrastructure/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/admin/catalogo/infrastructure/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/admin/catalogo/infrastructure/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/exceptions/DomainException.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/exceptions/DomainException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,13 +105,16 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.admin.catalogo.application" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="gradle application:build" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.CategoryTest.givenAValiadCategory_WhenCallUpdateWithInvalidParam_thenReturnCategoryUpdated">
+  <component name="RunManager" selected="Gradle.CreateCategoryUseCaseTest.givenAValidCommand_WhenGateThrowsRandomException_ShouldReturnException">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="admin-catalogo-codeflix" />
       <working_directory value="$PROJECT_DIR$" />
@@ -124,52 +132,6 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <method v="2" />
-    </configuration>
-    <configuration name="CategoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":domain:test" />
-            <option value="--tests" />
-            <option value="&quot;com.admin.catalogo.domain.category.CategoryTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CategoryTest.givenAValiadCategory_WhenCallUpdateToInactive_thenReturnCategoryUpdated" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":domain:test" />
-            <option value="--tests" />
-            <option value="&quot;com.admin.catalogo.domain.category.CategoryTest.givenAValiadCategory_WhenCallUpdateToInactive_thenReturnCategoryUpdated&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="CategoryTest.givenAValiadCategory_WhenCallUpdateWithInvalidParam_thenReturnCategoryUpdated" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -195,7 +157,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CategoryTest.givenAValiadCategory_WhenCallUpdate_thenReturnCategoryUpdated" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CreateCategoryUseCaseTest.givenAInvalidName_WhenCallsCreateCategory_ThenShouldReturnDomainException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -206,9 +168,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":domain:test" />
+            <option value=":application:test" />
             <option value="--tests" />
-            <option value="&quot;com.admin.catalogo.domain.category.CategoryTest.givenAValiadCategory_WhenCallUpdate_thenReturnCategoryUpdated&quot;" />
+            <option value="&quot;com.admin.catalogo.application.category.create.CreateCategoryUseCaseTest.givenAInvalidName_WhenCallsCreateCategory_ThenShouldReturnDomainException&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -218,7 +180,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CategoryTest.givenAvalidInactivateCategory_WhenCallActive_ThenReturnCategoryActivated" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CreateCategoryUseCaseTest.givenAValidCommandWithInactiveCategory_WhenCallsCreateCategory_shouldReturnInativeCategoryId" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -229,9 +191,55 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":domain:test" />
+            <option value=":application:test" />
             <option value="--tests" />
-            <option value="&quot;com.admin.catalogo.domain.category.CategoryTest.givenAvalidInactivateCategory_WhenCallActive_ThenReturnCategoryActivated&quot;" />
+            <option value="&quot;com.admin.catalogo.application.category.create.CreateCategoryUseCaseTest.givenAValidCommandWithInactiveCategory_WhenCallsCreateCategory_shouldReturnInativeCategoryId&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CreateCategoryUseCaseTest.givenAValidCommand_WhenCallsCreateCategory_shouldReturnCategoryId" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":application:test" />
+            <option value="--tests" />
+            <option value="&quot;com.admin.catalogo.application.category.create.CreateCategoryUseCaseTest.givenAValidCommand_WhenCallsCreateCategory_shouldReturnCategoryId&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CreateCategoryUseCaseTest.givenAValidCommand_WhenGateThrowsRandomException_ShouldReturnException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":application:test" />
+            <option value="--tests" />
+            <option value="&quot;com.admin.catalogo.application.category.create.CreateCategoryUseCaseTest.givenAValidCommand_WhenGateThrowsRandomException_ShouldReturnException&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -243,11 +251,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CreateCategoryUseCaseTest.givenAValidCommand_WhenGateThrowsRandomException_ShouldReturnException" />
+        <item itemvalue="Gradle.CreateCategoryUseCaseTest.givenAValidCommandWithInactiveCategory_WhenCallsCreateCategory_shouldReturnInativeCategoryId" />
+        <item itemvalue="Gradle.CreateCategoryUseCaseTest.givenAInvalidName_WhenCallsCreateCategory_ThenShouldReturnDomainException" />
+        <item itemvalue="Gradle.CreateCategoryUseCaseTest.givenAValidCommand_WhenCallsCreateCategory_shouldReturnCategoryId" />
         <item itemvalue="Gradle.CategoryTest.givenAValiadCategory_WhenCallUpdateWithInvalidParam_thenReturnCategoryUpdated" />
-        <item itemvalue="Gradle.CategoryTest.givenAValiadCategory_WhenCallUpdateToInactive_thenReturnCategoryUpdated" />
-        <item itemvalue="Gradle.CategoryTest.givenAValiadCategory_WhenCallUpdate_thenReturnCategoryUpdated" />
-        <item itemvalue="Gradle.CategoryTest" />
-        <item itemvalue="Gradle.CategoryTest.givenAvalidInactivateCategory_WhenCallActive_ThenReturnCategoryActivated" />
       </list>
     </recent_temporary>
   </component>
@@ -264,7 +272,9 @@
       <workItem from="1708385531259" duration="7644000" />
       <workItem from="1708562092311" duration="3527000" />
       <workItem from="1708565666299" duration="3171000" />
-      <workItem from="1708650731897" duration="2129000" />
+      <workItem from="1708650731897" duration="3410000" />
+      <workItem from="1709077042864" duration="3881000" />
+      <workItem from="1709167253360" duration="4440000" />
     </task>
     <task id="LOCAL-00001" summary="criacao de agragate, entity and indetifier">
       <created>1708565264096</created>
@@ -308,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708568829640</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Implementando update e implementando testes unitarios.">
+      <created>1708652986457</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708652986457</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +338,8 @@
     <MESSAGE value="Criando classes exceptions" />
     <MESSAGE value="Alterando classe categoria e alteracao de testes" />
     <MESSAGE value="Implementando ativar e inativar categoria, correcao de testes unitarios e validator." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementando ativar e inativar categoria, correcao de testes unitarios e validator." />
+    <MESSAGE value="Implementando update e implementando testes unitarios." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementando update e implementando testes unitarios." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
