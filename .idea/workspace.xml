@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fbf3906-100c-4f95-8752-344a0ed80b54" name="Changes" comment="Implementando create + testes unitarios + Correcao DomainException">
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/validation/handler/Notification.java" afterDir="false" />
+    <list default="true" id="1fbf3906-100c-4f95-8752-344a0ed80b54" name="Changes" comment="Alteracao Category, criando classes de update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/category/create/CreateCategoryUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/category/create/CreateCategoryUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/category/create/DefaultCreateCategoryUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/category/create/DefaultCreateCategoryUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/test/java/com/admin/catalogo/application/category/create/CreateCategoryUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/admin/catalogo/application/category/create/CreateCategoryUseCaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/category/CateroryValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/category/CateroryValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/exceptions/DomainException.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/exceptions/DomainException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/validation/ValidationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/validation/ValidationHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/validation/handler/ThrowsValidationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/validation/handler/ThrowsValidationHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/admin/catalogo/domain/category/CategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/admin/catalogo/domain/category/CategoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/category/update/DefaultUpdateCategoryUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/category/update/DefaultUpdateCategoryUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/test/java/com/admin/catalogo/application/category/update/UpdateCategoryUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/admin/catalogo/application/category/update/UpdateCategoryUseCaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +103,7 @@
       <command value="gradle application:build" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.CategoryTest">
+  <component name="RunManager" selected="Gradle.UpdateCategoryUseCaseTest">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="admin-catalogo-codeflix" />
       <working_directory value="$PROJECT_DIR$" />
@@ -130,7 +123,7 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="CategoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UpdateCategoryUseCaseTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -141,9 +134,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":domain:test" />
+            <option value=":application:test" />
             <option value="--tests" />
-            <option value="&quot;com.admin.catalogo.domain.category.CategoryTest&quot;" />
+            <option value="&quot;com.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -153,7 +146,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CategoryTest.givenAValiadCategory_WhenCallUpdateToInactive_thenReturnCategoryUpdated" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UpdateCategoryUseCaseTest.givenACommandWithInvalidID_WhenCallsUpdateCategory_shouldReturnNotFoundException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -164,9 +157,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":domain:test" />
+            <option value=":application:test" />
             <option value="--tests" />
-            <option value="&quot;com.admin.catalogo.domain.category.CategoryTest.givenAValiadCategory_WhenCallUpdateToInactive_thenReturnCategoryUpdated&quot;" />
+            <option value="&quot;com.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest.givenACommandWithInvalidID_WhenCallsUpdateCategory_shouldReturnNotFoundException&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -176,7 +169,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CategoryTest.givenAValiadCategory_WhenCallUpdate_thenReturnCategoryUpdated" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UpdateCategoryUseCaseTest.givenAInvalidName_WhenCallsUpdateCategory_ThenShouldReturnDomainException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -187,9 +180,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":domain:test" />
+            <option value=":application:test" />
             <option value="--tests" />
-            <option value="&quot;com.admin.catalogo.domain.category.CategoryTest.givenAValiadCategory_WhenCallUpdate_thenReturnCategoryUpdated&quot;" />
+            <option value="&quot;com.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest.givenAInvalidName_WhenCallsUpdateCategory_ThenShouldReturnDomainException&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -199,7 +192,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CategoryTest.givenAvalidActiveCategory_WhenCallDeactive_ThenReturnCategoryInactivated" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UpdateCategoryUseCaseTest.givenAValidCommand_WhenGatewayThrowsRandomException_ShouldReturnAException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -210,9 +203,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":domain:test" />
+            <option value=":application:test" />
             <option value="--tests" />
-            <option value="&quot;com.admin.catalogo.domain.category.CategoryTest.givenAvalidActiveCategory_WhenCallDeactive_ThenReturnCategoryInactivated&quot;" />
+            <option value="&quot;com.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest.givenAValidCommand_WhenGatewayThrowsRandomException_ShouldReturnAException&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -222,7 +215,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CategoryTest.givenAvalidNullName_whenCallNewCategoryAndValidateShouldReceiveError" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UpdateCategoryUseCaseTest.givenAValidInactivateCommand_WhenCallsUpdateCategory_shouldReturnInactivatedCategoryId" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -233,9 +226,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":domain:test" />
+            <option value=":application:test" />
             <option value="--tests" />
-            <option value="&quot;com.admin.catalogo.domain.category.CategoryTest.givenAvalidNullName_whenCallNewCategoryAndValidateShouldReceiveError&quot;" />
+            <option value="&quot;com.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest.givenAValidInactivateCommand_WhenCallsUpdateCategory_shouldReturnInactivatedCategoryId&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -247,11 +240,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CategoryTest" />
-        <item itemvalue="Gradle.CategoryTest.givenAValiadCategory_WhenCallUpdateToInactive_thenReturnCategoryUpdated" />
-        <item itemvalue="Gradle.CategoryTest.givenAValiadCategory_WhenCallUpdate_thenReturnCategoryUpdated" />
-        <item itemvalue="Gradle.CategoryTest.givenAvalidActiveCategory_WhenCallDeactive_ThenReturnCategoryInactivated" />
-        <item itemvalue="Gradle.CategoryTest.givenAvalidNullName_whenCallNewCategoryAndValidateShouldReceiveError" />
+        <item itemvalue="Gradle.UpdateCategoryUseCaseTest" />
+        <item itemvalue="Gradle.UpdateCategoryUseCaseTest.givenACommandWithInvalidID_WhenCallsUpdateCategory_shouldReturnNotFoundException" />
+        <item itemvalue="Gradle.UpdateCategoryUseCaseTest.givenAValidCommand_WhenGatewayThrowsRandomException_ShouldReturnAException" />
+        <item itemvalue="Gradle.UpdateCategoryUseCaseTest.givenAValidInactivateCommand_WhenCallsUpdateCategory_shouldReturnInactivatedCategoryId" />
+        <item itemvalue="Gradle.UpdateCategoryUseCaseTest.givenAInvalidName_WhenCallsUpdateCategory_ThenShouldReturnDomainException" />
       </list>
     </recent_temporary>
   </component>
@@ -270,7 +263,11 @@
       <workItem from="1708565666299" duration="3171000" />
       <workItem from="1708650731897" duration="3410000" />
       <workItem from="1709077042864" duration="3881000" />
-      <workItem from="1709167253360" duration="12651000" />
+      <workItem from="1709167253360" duration="13107000" />
+      <workItem from="1709544805574" duration="2282000" />
+      <workItem from="1709685289956" duration="3141000" />
+      <workItem from="1709716493370" duration="1872000" />
+      <workItem from="1710205062376" duration="1888000" />
     </task>
     <task id="LOCAL-00001" summary="criacao de agragate, entity and indetifier">
       <created>1708565264096</created>
@@ -328,7 +325,21 @@
       <option name="project" value="LOCAL" />
       <updated>1709171740257</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Alteracao DomainException, Create validation Notification, alter ThrowsValidationHandler, alter ValidationHandler e alteracao categoryValidator">
+      <created>1709204442903</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709204442903</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Alteracao Category, criando classes de update">
+      <created>1709688427430</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709688427430</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +354,9 @@
     <MESSAGE value="Implementando ativar e inativar categoria, correcao de testes unitarios e validator." />
     <MESSAGE value="Implementando update e implementando testes unitarios." />
     <MESSAGE value="Implementando create + testes unitarios + Correcao DomainException" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementando create + testes unitarios + Correcao DomainException" />
+    <MESSAGE value="Alteracao DomainException, Create validation Notification, alter ThrowsValidationHandler, alter ValidationHandler e alteracao categoryValidator" />
+    <MESSAGE value="Alteracao Category, criando classes de update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alteracao Category, criando classes de update" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
@@ -355,11 +368,6 @@
           <url>file://$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/exceptions/DomainException.java</url>
           <line>15</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/application/src/test/java/com/admin/catalogo/application/category/create/CreateCategoryUseCaseTest.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/domain/src/test/java/com/admin/catalogo/domain/category/CategoryTest.java</url>
