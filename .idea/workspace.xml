@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fbf3906-100c-4f95-8752-344a0ed80b54" name="Changes" comment="Alteracao Category, criando classes de update">
+    <list default="true" id="1fbf3906-100c-4f95-8752-344a0ed80b54" name="Changes" comment="implementando classes retrive utilizando TDD.">
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/category/retrieve/list/CategoryListOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/category/retrieve/list/DefaultListCategoriesUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/category/retrieve/list/ListCategoriesUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/test/java/com/admin/catalogo/application/category/retrieve/list/ListCategoriesUseCaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/category/update/DefaultUpdateCategoryUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/admin/catalogo/application/category/update/DefaultUpdateCategoryUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/test/java/com/admin/catalogo/application/category/update/UpdateCategoryUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/admin/catalogo/application/category/update/UpdateCategoryUseCaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/pagination/Pagination.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/pagination/Pagination.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +77,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Giovane/Documents/dev/admin-catalogo-codeflix/application/src/test/java/com/admin/catalogo/application/category/delete&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -88,8 +92,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.admin.catalogo.application.category.delete.create" />
       <recent name="com.admin.catalogo.domain" />
       <recent name="com.admin.catalogo.domain.category" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Giovane\Documents\dev\admin-catalogo-codeflix\application\src\test\java\com\admin\catalogo\application\category\delete" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -103,7 +111,7 @@
       <command value="gradle application:build" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.UpdateCategoryUseCaseTest">
+  <component name="RunManager" selected="Gradle.ListCategoriesUseCaseTest.givenAValidQuery_whenGatewayThrowsException_SholdReturnExeption">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="admin-catalogo-codeflix" />
       <working_directory value="$PROJECT_DIR$" />
@@ -123,7 +131,7 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="UpdateCategoryUseCaseTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GetCategoryByIdUseCaseTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -136,7 +144,7 @@
           <list>
             <option value=":application:test" />
             <option value="--tests" />
-            <option value="&quot;com.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest&quot;" />
+            <option value="&quot;com.admin.catalogo.application.category.retrieve.get.GetCategoryByIdUseCaseTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -146,7 +154,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UpdateCategoryUseCaseTest.givenACommandWithInvalidID_WhenCallsUpdateCategory_shouldReturnNotFoundException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GetCategoryByIdUseCaseTest.givenAValidId_WhenCallsGetCategory_shouldReturnCategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -159,7 +167,7 @@
           <list>
             <option value=":application:test" />
             <option value="--tests" />
-            <option value="&quot;com.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest.givenACommandWithInvalidID_WhenCallsUpdateCategory_shouldReturnNotFoundException&quot;" />
+            <option value="&quot;com.admin.catalogo.application.category.retrieve.GetCategoryByIdUseCaseTest.givenAValidId_WhenCallsGetCategory_shouldReturnCategory&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -169,7 +177,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UpdateCategoryUseCaseTest.givenAInvalidName_WhenCallsUpdateCategory_ThenShouldReturnDomainException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ListCategoriesUseCaseTest.givenAValidQuery_whenCallsListCategories_ThenSholdReturnCategories" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -182,7 +190,7 @@
           <list>
             <option value=":application:test" />
             <option value="--tests" />
-            <option value="&quot;com.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest.givenAInvalidName_WhenCallsUpdateCategory_ThenShouldReturnDomainException&quot;" />
+            <option value="&quot;com.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseTest.givenAValidQuery_whenCallsListCategories_ThenSholdReturnCategories&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -192,7 +200,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UpdateCategoryUseCaseTest.givenAValidCommand_WhenGatewayThrowsRandomException_ShouldReturnAException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ListCategoriesUseCaseTest.givenAValidQuery_whenGatewayThrowsException_SholdReturnExeption" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -205,7 +213,7 @@
           <list>
             <option value=":application:test" />
             <option value="--tests" />
-            <option value="&quot;com.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest.givenAValidCommand_WhenGatewayThrowsRandomException_ShouldReturnAException&quot;" />
+            <option value="&quot;com.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseTest.givenAValidQuery_whenGatewayThrowsException_SholdReturnExeption&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -215,7 +223,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UpdateCategoryUseCaseTest.givenAValidInactivateCommand_WhenCallsUpdateCategory_shouldReturnInactivatedCategoryId" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ListCategoriesUseCaseTest.givenAValidQuery_whenHasNoResults_ThenSholdReturnEmptyCategories" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -228,7 +236,7 @@
           <list>
             <option value=":application:test" />
             <option value="--tests" />
-            <option value="&quot;com.admin.catalogo.application.category.update.UpdateCategoryUseCaseTest.givenAValidInactivateCommand_WhenCallsUpdateCategory_shouldReturnInactivatedCategoryId&quot;" />
+            <option value="&quot;com.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseTest.givenAValidQuery_whenHasNoResults_ThenSholdReturnEmptyCategories&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -240,11 +248,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.UpdateCategoryUseCaseTest" />
-        <item itemvalue="Gradle.UpdateCategoryUseCaseTest.givenACommandWithInvalidID_WhenCallsUpdateCategory_shouldReturnNotFoundException" />
-        <item itemvalue="Gradle.UpdateCategoryUseCaseTest.givenAValidCommand_WhenGatewayThrowsRandomException_ShouldReturnAException" />
-        <item itemvalue="Gradle.UpdateCategoryUseCaseTest.givenAValidInactivateCommand_WhenCallsUpdateCategory_shouldReturnInactivatedCategoryId" />
-        <item itemvalue="Gradle.UpdateCategoryUseCaseTest.givenAInvalidName_WhenCallsUpdateCategory_ThenShouldReturnDomainException" />
+        <item itemvalue="Gradle.ListCategoriesUseCaseTest.givenAValidQuery_whenGatewayThrowsException_SholdReturnExeption" />
+        <item itemvalue="Gradle.ListCategoriesUseCaseTest.givenAValidQuery_whenHasNoResults_ThenSholdReturnEmptyCategories" />
+        <item itemvalue="Gradle.ListCategoriesUseCaseTest.givenAValidQuery_whenCallsListCategories_ThenSholdReturnCategories" />
+        <item itemvalue="Gradle.GetCategoryByIdUseCaseTest" />
+        <item itemvalue="Gradle.GetCategoryByIdUseCaseTest.givenAValidId_WhenCallsGetCategory_shouldReturnCategory" />
       </list>
     </recent_temporary>
   </component>
@@ -267,7 +275,10 @@
       <workItem from="1709544805574" duration="2282000" />
       <workItem from="1709685289956" duration="3141000" />
       <workItem from="1709716493370" duration="1872000" />
-      <workItem from="1710205062376" duration="1888000" />
+      <workItem from="1710205062376" duration="2559000" />
+      <workItem from="1710289231280" duration="3838000" />
+      <workItem from="1710464786993" duration="2608000" />
+      <workItem from="1711588613445" duration="3876000" />
     </task>
     <task id="LOCAL-00001" summary="criacao de agragate, entity and indetifier">
       <created>1708565264096</created>
@@ -339,7 +350,35 @@
       <option name="project" value="LOCAL" />
       <updated>1709688427430</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Teste unitarios e implmentacao DefaultUpdateCategoryUseCase">
+      <created>1710207015588</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1710207015588</updated>
+    </task>
+    <task id="LOCAL-00012" summary="hooks do Junit usando beforeeach">
+      <created>1710289537622</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1710289537622</updated>
+    </task>
+    <task id="LOCAL-00013" summary="implementando classes de delete utilizando TDD.">
+      <created>1710292521806</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1710292521806</updated>
+    </task>
+    <task id="LOCAL-00014" summary="implementando classes retrive utilizando TDD.">
+      <created>1710467312289</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1710467312289</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +395,11 @@
     <MESSAGE value="Implementando create + testes unitarios + Correcao DomainException" />
     <MESSAGE value="Alteracao DomainException, Create validation Notification, alter ThrowsValidationHandler, alter ValidationHandler e alteracao categoryValidator" />
     <MESSAGE value="Alteracao Category, criando classes de update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alteracao Category, criando classes de update" />
+    <MESSAGE value="Teste unitarios e implmentacao DefaultUpdateCategoryUseCase" />
+    <MESSAGE value="hooks do Junit usando beforeeach" />
+    <MESSAGE value="implementando classes de delete utilizando TDD." />
+    <MESSAGE value="implementando classes retrive utilizando TDD." />
+    <option name="LAST_COMMIT_MESSAGE" value="implementando classes retrive utilizando TDD." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
