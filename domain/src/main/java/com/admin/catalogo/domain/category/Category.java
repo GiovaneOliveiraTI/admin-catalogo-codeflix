@@ -6,10 +6,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.Instant;
-@Getter
-@Setter
-public class Category extends AggregateRoot<CategoryID> implements Cloneable {
+import java.util.Objects;
 
+public class Category extends AggregateRoot<CategoryID> implements Cloneable {
     private String name;
     private String description;
     private boolean active;
@@ -23,15 +22,15 @@ public class Category extends AggregateRoot<CategoryID> implements Cloneable {
             final String aDescription,
             final boolean isActive,
             final Instant aCreationDate,
-            final Instant aUpdatedDate,
+            final Instant aUpdateDate,
             final Instant aDeleteDate
     ) {
         super(anId);
         this.name = aName;
         this.description = aDescription;
         this.active = isActive;
-        this.createdAt = aCreationDate;
-        this.updatedAt = aUpdatedDate;
+        this.createdAt = Objects.requireNonNull(aCreationDate, "'createdAt' should not be null");
+        this.updatedAt = Objects.requireNonNull(aUpdateDate, "'updatedAt' should not be null");
         this.deletedAt = aDeleteDate;
     }
 
@@ -40,23 +39,57 @@ public class Category extends AggregateRoot<CategoryID> implements Cloneable {
         final var now = Instant.now();
         final var deletedAt = isActive ? null : now;
         return new Category(id, aName, aDescription, isActive, now, now, deletedAt);
+    }
 
+    public static Category with(
+            final CategoryID anId,
+            final String name,
+            final String description,
+            final boolean active,
+            final Instant createdAt,
+            final Instant updatedAt,
+            final Instant deletedAt
+    ) {
+        return new Category(
+                anId,
+                name,
+                description,
+                active,
+                createdAt,
+                updatedAt,
+                deletedAt
+        );
+    }
+
+    public static Category with(final Category aCategory) {
+        return with(
+                aCategory.getId(),
+                aCategory.name,
+                aCategory.description,
+                aCategory.isActive(),
+                aCategory.createdAt,
+                aCategory.updatedAt,
+                aCategory.deletedAt
+        );
     }
 
     @Override
-    public void validate(ValidationHandler handler) {
-        new CateroryValidator(this,handler).validate();
+    public void validate(final ValidationHandler handler) {
+        new CategoryValidator(this, handler).validate();
     }
-    public Category activate(){
-        this.updatedAt = null;
+
+    public Category activate() {
+        this.deletedAt = null;
         this.active = true;
         this.updatedAt = Instant.now();
         return this;
     }
-    public Category deactivate(){
-        if(getDeletedAt() == null) {
-            this.deletedAt= Instant.now();
+
+    public Category deactivate() {
+        if (getDeletedAt() == null) {
+            this.deletedAt = Instant.now();
         }
+
         this.active = false;
         this.updatedAt = Instant.now();
         return this;
@@ -66,8 +99,8 @@ public class Category extends AggregateRoot<CategoryID> implements Cloneable {
             final String aName,
             final String aDescription,
             final boolean isActive
-    ){
-        if(isActive) {
+    ) {
+        if (isActive) {
             activate();
         } else {
             deactivate();
@@ -76,9 +109,35 @@ public class Category extends AggregateRoot<CategoryID> implements Cloneable {
         this.description = aDescription;
         this.updatedAt = Instant.now();
         return this;
-
     }
 
+    public CategoryID getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public Instant getCreatedAt() {
+        return createdAt;
+    }
+
+    public Instant getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public Instant getDeletedAt() {
+        return deletedAt;
+    }
 
     @Override
     public Category clone() {

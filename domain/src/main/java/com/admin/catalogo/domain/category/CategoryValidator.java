@@ -4,12 +4,12 @@ import com.admin.catalogo.domain.validation.Error;
 import com.admin.catalogo.domain.validation.ValidationHandler;
 import com.admin.catalogo.domain.validation.Validator;
 
-public class CateroryValidator extends Validator {
+public class CategoryValidator extends Validator {
 
     public static final int NAME_MAX_LENGTH = 255;
     public static final int NAME_MIN_LENGTH = 3;
     private final Category category;
-    protected CateroryValidator(final Category aCategory, final ValidationHandler aHandler) {
+    protected CategoryValidator(final Category aCategory, final ValidationHandler aHandler) {
         super(aHandler);
         this.category = aCategory;
     }
