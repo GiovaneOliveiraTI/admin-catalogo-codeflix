@@ -2,7 +2,7 @@ package com.admin.catalogo.application.category.create;
 
 public record CreateCategoryCommand(
         String name,
-        String decription,
+        String description,
         boolean isActive
 ) {
 

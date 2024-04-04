@@ -19,47 +19,44 @@ public class DeleteCategoryUseCaseTest {
 
     @InjectMocks
     private DefaultDeleteCategoryUseCase useCase;
+
     @Mock
     private CategoryGateway categoryGateway;
+
     @BeforeEach
-    void CleanUp() {
-        reset(categoryGateway);
+    void cleanUp() {
+        Mockito.reset(categoryGateway);
     }
 
     @Test
-    public void givenAValidId_WhenCallsDeleteCategory_shouldBeOK() {
-
-        final var aCategory = Category.newCategory("Filmes", "A categoria mais assistida", true  );
+    public void givenAValidId_whenCallsDeleteCategory_shouldBeOK() {
+        final var aCategory = Category.newCategory("Filmes", "A categoria mais assistida", true);
         final var expectedId = aCategory.getId();
 
-        doNothing().when(categoryGateway).deleteById(eq(expectedId));
+        doNothing()
+                .when(categoryGateway).deleteById(eq(expectedId));
 
-        Assertions.assertDoesNotThrow(()-> useCase.execute(expectedId.getValue()));
+        Assertions.assertDoesNotThrow(() -> useCase.execute(expectedId.getValue()));
 
         Mockito.verify(categoryGateway, times(1)).deleteById(eq(expectedId));
-
     }
 
     @Test
-    public void givenAInvalidId_WhenCallsDeleteCategory_ThenShouldBeOK() {
-
+    public void givenAInvalidId_whenCallsDeleteCategory_shouldBeOK() {
         final var expectedId = CategoryID.from("123");
 
-        doNothing().when(categoryGateway).deleteById(eq(expectedId));
+        doNothing()
+                .when(categoryGateway).deleteById(eq(expectedId));
 
-        Assertions.assertDoesNotThrow(()-> useCase.execute(expectedId.getValue()));
+        Assertions.assertDoesNotThrow(() -> useCase.execute(expectedId.getValue()));
 
         Mockito.verify(categoryGateway, times(1)).deleteById(eq(expectedId));
-
-
     }
 
     @Test
-    public void givenAvalidId_WhenGatewayThrowsException_ShouldReturnException() {
-
-        final var aCategory = Category.newCategory("Filmes", "A categoria mais assistida", true  );
+    public void givenAValidId_whenGatewayThrowsException_shouldReturnException() {
+        final var aCategory = Category.newCategory("Filmes", "A categoria mais assistida", true);
         final var expectedId = aCategory.getId();
-
 
         doThrow(new IllegalStateException("Gateway error"))
                 .when(categoryGateway).deleteById(eq(expectedId));
@@ -67,6 +64,5 @@ public class DeleteCategoryUseCaseTest {
         Assertions.assertThrows(IllegalStateException.class, () -> useCase.execute(expectedId.getValue()));
 
         Mockito.verify(categoryGateway, times(1)).deleteById(eq(expectedId));
-
     }
 }

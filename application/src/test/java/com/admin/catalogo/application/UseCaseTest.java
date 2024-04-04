@@ -7,8 +7,9 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
 public class UseCaseTest {
+
     @Test
-    public void TestCreateUseCase(){
+    public void testCreateUseCase() {
 
     }
 }

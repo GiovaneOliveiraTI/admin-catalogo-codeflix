@@ -41,8 +41,8 @@ public class CategoryTest {
         final var actualException =
                 Assertions.assertThrows(DomainException.class, () -> actualCategory.validate(new ThrowsValidationHandler()));
 
-        Assertions.assertEquals(expectedErrorCount, actualException.getErros().size());
-        Assertions.assertEquals(expectedErrorMessage, actualException.getErros().get(0).message());
+        Assertions.assertEquals(expectedErrorCount, actualException.getErrors().size());
+        Assertions.assertEquals(expectedErrorMessage, actualException.getErrors().get(0).message());
     }
 
     @Test
@@ -59,8 +59,8 @@ public class CategoryTest {
         final var actualException =
                 Assertions.assertThrows(DomainException.class, () -> actualCategory.validate(new ThrowsValidationHandler()));
 
-        Assertions.assertEquals(expectedErrorCount, actualException.getErros().size());
-        Assertions.assertEquals(expectedErrorMessage, actualException.getErros().get(0).message());
+        Assertions.assertEquals(expectedErrorCount, actualException.getErrors().size());
+        Assertions.assertEquals(expectedErrorMessage, actualException.getErrors().get(0).message());
     }
 
     @Test
@@ -77,8 +77,8 @@ public class CategoryTest {
         final var actualException =
                 Assertions.assertThrows(DomainException.class, () -> actualCategory.validate(new ThrowsValidationHandler()));
 
-        Assertions.assertEquals(expectedErrorCount, actualException.getErros().size());
-        Assertions.assertEquals(expectedErrorMessage, actualException.getErros().get(0).message());
+        Assertions.assertEquals(expectedErrorCount, actualException.getErrors().size());
+        Assertions.assertEquals(expectedErrorMessage, actualException.getErrors().get(0).message());
     }
 
     @Test
@@ -100,8 +100,8 @@ public class CategoryTest {
         final var actualException =
                 Assertions.assertThrows(DomainException.class, () -> actualCategory.validate(new ThrowsValidationHandler()));
 
-        Assertions.assertEquals(expectedErrorCount, actualException.getErros().size());
-        Assertions.assertEquals(expectedErrorMessage, actualException.getErros().get(0).message());
+        Assertions.assertEquals(expectedErrorCount, actualException.getErrors().size());
+        Assertions.assertEquals(expectedErrorMessage, actualException.getErrors().get(0).message());
     }
 
     @Test
@@ -172,7 +172,7 @@ public class CategoryTest {
         Assertions.assertEquals(expectedDescription, actualCategory.getDescription());
         Assertions.assertEquals(expectedIsActive, actualCategory.isActive());
         Assertions.assertEquals(createdAt, actualCategory.getCreatedAt());
-        Assertions.assertFalse(actualCategory.getUpdatedAt().isAfter(updatedAt));
+        Assertions.assertTrue(actualCategory.getUpdatedAt().isAfter(updatedAt));
         Assertions.assertNotNull(actualCategory.getDeletedAt());
     }
 
@@ -229,7 +229,7 @@ public class CategoryTest {
         Assertions.assertEquals(expectedDescription, actualCategory.getDescription());
         Assertions.assertEquals(expectedIsActive, actualCategory.isActive());
         Assertions.assertEquals(createdAt, actualCategory.getCreatedAt());
-        Assertions.assertFalse(actualCategory.getUpdatedAt().isAfter(updatedAt));
+        Assertions.assertTrue(actualCategory.getUpdatedAt().isAfter(updatedAt));
         Assertions.assertNull(actualCategory.getDeletedAt());
     }
 
@@ -283,7 +283,7 @@ public class CategoryTest {
         Assertions.assertEquals(expectedDescription, actualCategory.getDescription());
         Assertions.assertTrue(aCategory.isActive());
         Assertions.assertEquals(createdAt, actualCategory.getCreatedAt());
-        Assertions.assertFalse(actualCategory.getUpdatedAt().isAfter(updatedAt));
+        Assertions.assertTrue(actualCategory.getUpdatedAt().isAfter(updatedAt));
         Assertions.assertNull(aCategory.getDeletedAt());
     }
 }

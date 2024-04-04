@@ -4,14 +4,16 @@ import com.admin.catalogo.domain.validation.Error;
 import lombok.Getter;
 
 import java.util.List;
-@Getter
+
 public class DomainException extends NoStackTraceException {
 
-    private final List<Error> erros;
+    private final List<Error> errors;
+
     private DomainException(final String aMessage, final List<Error> anErrors) {
         super(aMessage);
-        this.erros = anErrors;
+        this.errors = anErrors;
     }
+
     public static DomainException with(final Error anErrors) {
         return new DomainException(anErrors.message(), List.of(anErrors));
     }
@@ -20,6 +22,7 @@ public class DomainException extends NoStackTraceException {
         return new DomainException("", anErrors);
     }
 
-
-
+    public List<Error> getErrors() {
+        return errors;
+    }
 }
