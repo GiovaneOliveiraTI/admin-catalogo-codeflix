@@ -4,10 +4,118 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fbf3906-100c-4f95-8752-344a0ed80b54" name="Changes" comment="Configurando datasource springboot + docker-compose.yml">
-      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/resources/application-test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/test/java/com/admin/catalogo/infrastructure/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/admin/catalogo/infrastructure/MainTest.java" afterDir="false" />
+    <list default="true" id="0a099789-0be5-4025-bcb2-075940b7e38b" name="Changes" comment="Alteracoes build.gradle.">
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/0780843175e2864727f215362a06308c278687f6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0ab0e5d8e346442dd35ef0e4c82aabbb5f9be1c8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/0/10cb1320de0fe3ae42bbd5c23098802d6c0754d1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1d8fcb112cbcccfb346919988b050e2d0b34ae56" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2b1ae36ae592f7e77e065432bf0af670b7de9708" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/c/2c68486f4c1a646b262afcfd3b1318a0f0ae91ad" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2ed9f0ed629309a96c76695a4823878aeda3be35" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/32f1458f52ca6ece8ea326d039350d3d454ecc13" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/6/3694959ed3f816d32643e042ef9d868db99ae8fb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/42b972b3b95815e15332bcf986ec036077f07a57" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/43aefbb50b8658a8e678b37abe25a69278c42e95" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4a30b71f59abb23a5129a9305012844e8aee3ba1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4a4beca5c1b2745b57dd177abf2ca5d4d02855ab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/52685175934b9ec9ff2f6bacb9048c7c7a61f422" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/3/53932cf2daf7d1878d6e70a9053d878a864ebbe2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5a2e654ce75b503dc0da55a5e0c683f3395e6d77" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5a7503487f4bbd0e6849195421ec445a991be45c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5ac71a563faec058179ea45c1efe10bd893f18ba" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/698dab97593be80e006992c9a872e6249885f8c1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b445fd69f5722e843142ff56e7633eda65e3015" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/7516646e999981b28bd2d05443322dbd7e243d25" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/9/7951ee7845842fadecd71363b71dc37c5b463394" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/6/86c202c0a28c7b7930e56f2dee5b3cd6db7bbeb4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8a24b22e30f315c9af51b203adc8caf277392d94" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8fd51ee51174edd9e3d70133186f84f350f7521f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/937e9e0a3438411f00ff70c6433193660ce803b5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/95e1c6fa91056e410f28e9c653cd01102f9bf060" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9fe37819c7190c4163888e5aafa03e4af8335330" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/2/a2291ade6938a819e23f3d3d92f147edf8452112" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3021bb5ba623a461b5fdb89ae51923a4945c354" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a80130c32ae4db89c1239757cbefad81e478bd95" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa41889e19cd716659f98d8c22cf914e632dcf22" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa9cf0dce48be9892530b6983bf9282cc49f2a75" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/e/ae5c2e07cf113e28258316e415807a4019489c37" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b167544ea8a0f356206624de88cea0251595caa8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/2/b22fb64b4878f56b7aebef7ae4ceea09775158cf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b389aef179640d29b2fa2d35c7d5dd7bfd8bc32f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6574d2f434f159c45e8e739cd6ae7ea7b9967e7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/f/bf0bf6d46fd76a970aba240a3737f0bf155fe4ea" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/6/c63608f28a642da2614efc1dbca6a76d98921ce7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/ca73f159adb4b8343b2dadeed367575733b62808" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cd8daffba0d7072718aaea711e3aa79f826be103" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/0/d08ad7275ca05d13cb570f6f624eee8075619a60" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/7/d7025241cbc70cc881625a7152185cd2f7fec8c3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d8675c46cacb4fc7d3003515bbe832e5b2bb7291" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/1/e1a89250385d4ad4b7c832dd6b38c03fd3f1d945" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e826f7b891ae6fdb0a747c1085a3d32f9e1aa8db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/c/ec49139868496e7ee95fc6cc198364a70169b74a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/e/ee3157c861ca2b9e42c1cdb4c25196bcc0423788" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f346823d2bfc205e8b761048bfc244d7c4dea58e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/5/f542dd9657cc19583b2385bb2d048cf09ba4e7a2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f60d7e050b061045e9113252a165ae6f425ab6bf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f6fe6030640d9ce060eb68b8e21eaa76251e283a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/7/0780843175e2864727f215362a06308c278687f6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/a/0ab0e5d8e346442dd35ef0e4c82aabbb5f9be1c8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/0/10cb1320de0fe3ae42bbd5c23098802d6c0754d1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/d/1d8fcb112cbcccfb346919988b050e2d0b34ae56" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/b/2b1ae36ae592f7e77e065432bf0af670b7de9708" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/c/2c68486f4c1a646b262afcfd3b1318a0f0ae91ad" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/e/2ed9f0ed629309a96c76695a4823878aeda3be35" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/2/32f1458f52ca6ece8ea326d039350d3d454ecc13" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/6/3694959ed3f816d32643e042ef9d868db99ae8fb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/2/42b972b3b95815e15332bcf986ec036077f07a57" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/3/43aefbb50b8658a8e678b37abe25a69278c42e95" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/a/4a30b71f59abb23a5129a9305012844e8aee3ba1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/a/4a4beca5c1b2745b57dd177abf2ca5d4d02855ab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/2/52685175934b9ec9ff2f6bacb9048c7c7a61f422" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/3/53932cf2daf7d1878d6e70a9053d878a864ebbe2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/a/5a2e654ce75b503dc0da55a5e0c683f3395e6d77" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/a/5a7503487f4bbd0e6849195421ec445a991be45c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/a/5ac71a563faec058179ea45c1efe10bd893f18ba" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/9/698dab97593be80e006992c9a872e6249885f8c1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/b/6b445fd69f5722e843142ff56e7633eda65e3015" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/5/7516646e999981b28bd2d05443322dbd7e243d25" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/9/7951ee7845842fadecd71363b71dc37c5b463394" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/6/86c202c0a28c7b7930e56f2dee5b3cd6db7bbeb4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/a/8a24b22e30f315c9af51b203adc8caf277392d94" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/f/8fd51ee51174edd9e3d70133186f84f350f7521f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/3/937e9e0a3438411f00ff70c6433193660ce803b5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/5/95e1c6fa91056e410f28e9c653cd01102f9bf060" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/f/9fe37819c7190c4163888e5aafa03e4af8335330" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/2/a2291ade6938a819e23f3d3d92f147edf8452112" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/3/a3021bb5ba623a461b5fdb89ae51923a4945c354" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/8/a80130c32ae4db89c1239757cbefad81e478bd95" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/a/aa41889e19cd716659f98d8c22cf914e632dcf22" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/a/aa9cf0dce48be9892530b6983bf9282cc49f2a75" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/e/ae5c2e07cf113e28258316e415807a4019489c37" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/1/b167544ea8a0f356206624de88cea0251595caa8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/2/b22fb64b4878f56b7aebef7ae4ceea09775158cf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/3/b389aef179640d29b2fa2d35c7d5dd7bfd8bc32f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/6/b6574d2f434f159c45e8e739cd6ae7ea7b9967e7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/f/bf0bf6d46fd76a970aba240a3737f0bf155fe4ea" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/6/c63608f28a642da2614efc1dbca6a76d98921ce7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/a/ca73f159adb4b8343b2dadeed367575733b62808" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/d/cd8daffba0d7072718aaea711e3aa79f826be103" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/0/d08ad7275ca05d13cb570f6f624eee8075619a60" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/7/d7025241cbc70cc881625a7152185cd2f7fec8c3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/8/d8675c46cacb4fc7d3003515bbe832e5b2bb7291" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/1/e1a89250385d4ad4b7c832dd6b38c03fd3f1d945" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/8/e826f7b891ae6fdb0a747c1085a3d32f9e1aa8db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/c/ec49139868496e7ee95fc6cc198364a70169b74a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/e/ee3157c861ca2b9e42c1cdb4c25196bcc0423788" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/3/f346823d2bfc205e8b761048bfc244d7c4dea58e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/5/f542dd9657cc19583b2385bb2d048cf09ba4e7a2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/6/f60d7e050b061045e9113252a165ae6f425ab6bf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/6/f6fe6030640d9ce060eb68b8e21eaa76251e283a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,442 +125,21 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="admin-catalogo-codeflix" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Record" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2cQiMMHIRKmkb4VV00Z2peR00G0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Giovane/Documents/dev/admin-catalogo-codeflix/infrastructure/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.gutterIcons&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;e0174b30b80f54fa5c77cebd5d64d451&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.admin.catalogo.application.category.delete.create" />
-      <recent name="com.admin.catalogo.domain" />
-      <recent name="com.admin.catalogo.domain.category" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Giovane\Documents\dev\admin-catalogo-codeflix\infrastructure\src\main\resources" />
-      <recent name="C:\Users\Giovane\Documents\dev\admin-catalogo-codeflix\application\src\test\java\com\admin\catalogo\application\category\delete" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.admin.catalogo.application" />
-    </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="gradle application:build" />
-    </option>
-  </component>
-  <component name="RunManager" selected="Spring Boot.Main">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="admin-catalogo-codeflix" />
-      <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="admin-catalogo-codeflix" />
-      <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ListCategoriesUseCaseTest.givenAValidQuery_whenGatewayThrowsException_SholdReturnExeption" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":application:test" />
-            <option value="--tests" />
-            <option value="&quot;com.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseTest.givenAValidQuery_whenGatewayThrowsException_SholdReturnExeption&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ListCategoriesUseCaseTest.givenAValidQuery_whenHasNoResults_ThenSholdReturnEmptyCategories" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":application:test" />
-            <option value="--tests" />
-            <option value="&quot;com.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseTest.givenAValidQuery_whenHasNoResults_ThenSholdReturnEmptyCategories&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="MainTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":infrastructure:test" />
-            <option value="--tests" />
-            <option value="&quot;com.admin.catalogo.infrastructure.MainTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="admin-catalogo-codeflix [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="admin-catalogo-codeflix.infrastructure.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.admin.catalogo.infrastructure.Main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.admin.catalogo.infrastructure.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.Main" />
-        <item itemvalue="Gradle.MainTest" />
-        <item itemvalue="Gradle.admin-catalogo-codeflix [dependencies]" />
-        <item itemvalue="Gradle.ListCategoriesUseCaseTest.givenAValidQuery_whenGatewayThrowsException_SholdReturnExeption" />
-        <item itemvalue="Gradle.ListCategoriesUseCaseTest.givenAValidQuery_whenHasNoResults_ThenSholdReturnEmptyCategories" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+}]]></component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="1fbf3906-100c-4f95-8752-344a0ed80b54" name="Changes" comment="" />
-      <created>1708050159741</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1708050159741</updated>
-      <workItem from="1708050160958" duration="218000" />
-      <workItem from="1708177994744" duration="8356000" />
-      <workItem from="1708385531259" duration="7644000" />
-      <workItem from="1708562092311" duration="3527000" />
-      <workItem from="1708565666299" duration="3171000" />
-      <workItem from="1708650731897" duration="3410000" />
-      <workItem from="1709077042864" duration="3881000" />
-      <workItem from="1709167253360" duration="13107000" />
-      <workItem from="1709544805574" duration="2282000" />
-      <workItem from="1709685289956" duration="3141000" />
-      <workItem from="1709716493370" duration="1872000" />
-      <workItem from="1710205062376" duration="2559000" />
-      <workItem from="1710289231280" duration="3838000" />
-      <workItem from="1710464786993" duration="2608000" />
-      <workItem from="1711588613445" duration="4993000" />
-      <workItem from="1711663225721" duration="4927000" />
-      <workItem from="1711745445946" duration="3155000" />
-      <workItem from="1711748624545" duration="1826000" />
-    </task>
-    <task id="LOCAL-00001" summary="criacao de agragate, entity and indetifier">
-      <created>1708565264096</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1708565264096</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Criando ValueObject">
-      <created>1708565371030</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1708565371030</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Criando classes de Validator">
-      <created>1708565452057</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1708565452057</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Criando classes exceptions">
-      <created>1708565497004</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1708565497004</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Alterando classe categoria e alteracao de testes">
-      <created>1708565541003</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1708565541003</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Implementando ativar e inativar categoria, correcao de testes unitarios e validator.">
-      <created>1708568829640</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1708568829640</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Implementando update e implementando testes unitarios.">
-      <created>1708652986457</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1708652986457</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Implementando create + testes unitarios + Correcao DomainException">
-      <created>1709171740257</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1709171740257</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Alteracao DomainException, Create validation Notification, alter ThrowsValidationHandler, alter ValidationHandler e alteracao categoryValidator">
-      <created>1709204442903</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1709204442903</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Alteracao Category, criando classes de update">
-      <created>1709688427430</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1709688427430</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Teste unitarios e implmentacao DefaultUpdateCategoryUseCase">
-      <created>1710207015588</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1710207015588</updated>
-    </task>
-    <task id="LOCAL-00012" summary="hooks do Junit usando beforeeach">
-      <created>1710289537622</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1710289537622</updated>
-    </task>
-    <task id="LOCAL-00013" summary="implementando classes de delete utilizando TDD.">
-      <created>1710292521806</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1710292521806</updated>
-    </task>
-    <task id="LOCAL-00014" summary="implementando classes retrive utilizando TDD.">
-      <created>1710467312289</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1710467312289</updated>
-    </task>
-    <task id="LOCAL-00015" summary="implementando classes ListCategoriesUseCase + tests unitarios">
-      <created>1711592545047</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1711592545047</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Configurando springboot.">
-      <created>1711665368335</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1711665368335</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Configurando profiles springboot.">
-      <created>1711746150787</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1711746150787</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Configurando datasource springboot + docker-compose.yml">
-      <created>1711748115465</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1711748115465</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="criacao de agragate, entity and indetifier" />
-    <MESSAGE value="Criando ValueObject" />
-    <MESSAGE value="Criando classes de Validator" />
-    <MESSAGE value="Criando classes exceptions" />
-    <MESSAGE value="Alterando classe categoria e alteracao de testes" />
-    <MESSAGE value="Implementando ativar e inativar categoria, correcao de testes unitarios e validator." />
-    <MESSAGE value="Implementando update e implementando testes unitarios." />
-    <MESSAGE value="Implementando create + testes unitarios + Correcao DomainException" />
-    <MESSAGE value="Alteracao DomainException, Create validation Notification, alter ThrowsValidationHandler, alter ValidationHandler e alteracao categoryValidator" />
-    <MESSAGE value="Alteracao Category, criando classes de update" />
-    <MESSAGE value="Teste unitarios e implmentacao DefaultUpdateCategoryUseCase" />
-    <MESSAGE value="hooks do Junit usando beforeeach" />
-    <MESSAGE value="implementando classes de delete utilizando TDD." />
-    <MESSAGE value="implementando classes retrive utilizando TDD." />
-    <MESSAGE value="implementando classes ListCategoriesUseCase + tests unitarios" />
-    <MESSAGE value="Configurando springboot." />
-    <MESSAGE value="Configurando profiles springboot." />
-    <MESSAGE value="Configurando datasource springboot + docker-compose.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configurando datasource springboot + docker-compose.yml" />
-  </component>
-  <component name="VgoProject">
-    <settings-migrated>true</settings-migrated>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/domain/src/main/java/com/admin/catalogo/domain/exceptions/DomainException.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/domain/src/test/java/com/admin/catalogo/domain/category/CategoryTest.java</url>
-          <line>239</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/infrastructure/src/main/java/com/admin/catalogo/infrastructure/Main.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/admin_catalogo_codeflix$CategoryTest_testeNewCategory.ic" NAME="CategoryTest.testeNewCategory Coverage Results" MODIFIED="1708178529598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/admin_catalogo_codeflix$CategoryMySQLGatewayTest_givenAValidCategory_whenCallsCreate_shouldReturnAnewCategory.ic" NAME="CategoryMySQLGatewayTest.givenAValidCategory_whenCallsCreate_shouldReturnAnewCategory Coverage Results" MODIFIED="1713231216939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/admin_catalogo_codeflix$CategoryTest.ic" NAME="CategoryTest Coverage Results" MODIFIED="1708568471017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
