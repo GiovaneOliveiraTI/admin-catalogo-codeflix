@@ -13,11 +13,11 @@ import java.time.Instant;
 @Entity
 @Table(name = "category")
 public class CategoryJpaEntity {
+
     @Id
     private String id;
 
-
-    @Column(name = "name", length = 4000)
+    @Column(name = "name", nullable = false)
     private String name;
 
     @Column(name = "description", length = 4000)
@@ -26,16 +26,17 @@ public class CategoryJpaEntity {
     @Column(name = "active", nullable = false)
     private boolean active;
 
-    @Column(name = "created_At", nullable = false, columnDefinition = "DATETIME(6)")
+    @Column(name = "created_at", nullable = false, columnDefinition = "DATETIME(6)")
     private Instant createdAt;
 
     @Column(name = "updated_at", nullable = false, columnDefinition = "DATETIME(6)")
     private Instant updatedAt;
 
-    @Column(name = "deleted_at", nullable = false, columnDefinition = "DATETIME(6)")
+    @Column(name = "deleted_at", columnDefinition = "DATETIME(6)")
     private Instant deletedAt;
 
-    public CategoryJpaEntity() {}
+    public CategoryJpaEntity() {
+    }
 
     private CategoryJpaEntity(
             final String id,
@@ -97,6 +98,10 @@ public class CategoryJpaEntity {
 
     public String getDescription() {
         return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public boolean isActive() {

@@ -14,7 +14,7 @@ public interface CategoryGateway {
 
     Category update(Category aCategory);
 
-Pagination<Category> findAll(CategorySearchQuery aQuery);
+    Pagination<Category> findAll(CategorySearchQuery aQuery);
 
 
 }
