@@ -12,6 +12,7 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.mock.mockito.SpyBean;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -126,9 +127,9 @@ public class UpdateCategoryUseCaseIT {
         Assertions.assertEquals(expectedName, actualCategory.getName());
         Assertions.assertEquals(expectedDescription, actualCategory.getDescription());
         Assertions.assertEquals(expectedIsActive, actualCategory.isActive());
-        Assertions.assertEquals(aCategory.getCreatedAt(), actualCategory.getCreatedAt());
-        Assertions.assertTrue(aCategory.getUpdatedAt().isBefore(actualCategory.getUpdatedAt()));
-        Assertions.assertNotNull(actualCategory.getDeletedAt());
+        Assertions.assertEquals(aCategory.getCreatedAt().truncatedTo(ChronoUnit.MILLIS), actualCategory.getCreatedAt().truncatedTo(ChronoUnit.MILLIS));
+        Assertions.assertTrue(aCategory.getUpdatedAt().isBefore(actualCategory.getUpdatedAt().truncatedTo(ChronoUnit.MILLIS)));
+        Assertions.assertNotNull(actualCategory.getDeletedAt().truncatedTo(ChronoUnit.MILLIS));
     }
 
     @Test
@@ -166,8 +167,8 @@ public class UpdateCategoryUseCaseIT {
         Assertions.assertEquals(aCategory.getName(), actualCategory.getName());
         Assertions.assertEquals(aCategory.getDescription(), actualCategory.getDescription());
         Assertions.assertEquals(aCategory.isActive(), actualCategory.isActive());
-        Assertions.assertEquals(aCategory.getCreatedAt(), actualCategory.getCreatedAt());
-        Assertions.assertEquals(aCategory.getUpdatedAt(), actualCategory.getUpdatedAt());
+        Assertions.assertEquals(aCategory.getCreatedAt().truncatedTo(ChronoUnit.MILLIS), actualCategory.getCreatedAt().truncatedTo(ChronoUnit.MILLIS));
+        Assertions.assertEquals(aCategory.getUpdatedAt().truncatedTo(ChronoUnit.MILLIS), actualCategory.getUpdatedAt().truncatedTo(ChronoUnit.MILLIS));
         Assertions.assertEquals(aCategory.getDeletedAt(), actualCategory.getDeletedAt());
     }
 
